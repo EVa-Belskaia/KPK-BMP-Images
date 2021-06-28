@@ -1,0 +1,726 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#3: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#4: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#5: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#6: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#7: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#8: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:51
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#9: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#10: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe, файл: C:\Users\User\Documents\kurs\TX\TXLib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#11: TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400], Instance: 0x00506304 (32-bit), Flags: CMdRe0, Thread: 0xE54 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042359A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: txTransparentBlt() at C:/Users/User/Documents/kurs/TX/TXLib.h (13657)
+
+# 1 0x0042CE4A in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: grassWind() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+# 2 0x0042CBA7 in C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe: main() at C:/Users/User/Documents/kurs/Paint-BMP/Probnik.cpp (10):
+
+      8:     txCreateWindow (540, 600);
+      9: 
+=>   10:     grassWind ();
+     11:     //Grass_Animate ();
+     12: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at C:\Users\User\Documents\kurs\TX\TXLib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in void grassWind() at C:\Users\User\Documents\kurs\Paint-BMP\Probnik.cpp (33):
+
+     31: 
+     32:         //DrawPlanet (600, 400, 160,  ROUND (160*cos(100-(i*0.05))+600), ROUND (400+160*sin(100-(i*0.05))), 15, RGB ( 90, 170, 255));
+=>   33:         txTransparentBlt (txDC(), 50 + t*5, 50, 0, 0, zemla, 0, 0);
+     34: 
+     35:         txTransparentBlt (txDC(), 0, 450, 0, 0, grass1, 0, 0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-06-16 02:02:25 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\User\Documents\kurs\TX\TXLib.h
+Compiled:	Jun 28 2021 14:37:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jun 28 2021 14:37:50
+
+Run file:	C:\Users\User\Documents\kurs\Paint-BMP\Probnik.exe
+Directory:	C:\Users\User\Documents\kurs\Paint-BMP
+
+--------------------------------------------------

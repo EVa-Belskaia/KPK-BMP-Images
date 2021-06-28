@@ -1,0 +1,36 @@
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:4:1: error: invalid digit "8" in octal constant
+ 00018     {
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:5:1: error: invalid digit "9" in octal constant
+ 00019     txCreateWindow (800, 600);
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:14:1: error: invalid digit "8" in octal constant
+ 00028     int    mode  = 1;
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:15:1: error: invalid digit "9" in octal constant
+ 00029     double alpha = 1;
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:24:1: error: invalid digit "8" in octal constant
+ 00038         if (GetAsyncKeyState ('2'))     mode   = 2;
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:25:1: error: invalid digit "9" in octal constant
+ 00039         if (GetAsyncKeyState ('3'))     mode   = 3;
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:34:1: error: invalid digit "8" in octal constant
+ 00048         switch (mode)
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:35:1: error: invalid digit "9" in octal constant
+ 00049             {
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:44:1: error: invalid digit "8" in octal constant
+ 00058
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:45:1: error: invalid digit "9" in octal constant
+ 00059     // ”дал€ем ненужные DC, освобожда€ системные ресурсы
+ ^
+C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp:2:1: error: expected unqualified-id before numeric constant
+ 00016
+ ^
+---------------------------------------------------------------------------------------------
+[09.06.2021 13:38:53,34 C:\Users\User@LAPTOP-9BOAKURE, returned 1]
+C:\Users\User\Documents\kurs\Paint-BMP> g++.exe "C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.cpp" -o C:\Users\User\Documents\kurs\Paint-BMP\Untitled2.exe  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
